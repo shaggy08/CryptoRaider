@@ -1,0 +1,14 @@
+.grap_conatiner{
+    width: 100%;
+    height: 300px;
+}
+.name_conatiner{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.name{
+    padding-left: 20px;
+}

@@ -1,0 +1,18 @@
+link {
+  text-decoration: none;
+}
+.f {
+  position: fixed;
+}
+.tag {
+  display: flex;
+  overflow: scroll;
+  justify-content: center;
+}
+.tag_list {
+  display: flex;
+  padding: 10px;
+}
+.active {
+  color: pink;
+}
