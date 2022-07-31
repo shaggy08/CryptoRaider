@@ -14,9 +14,7 @@ function Graph({ post }) {
   const { id } = useParams();
   const [cointime, setcointime] = useState([]);
   const [coinprize, setcoinprize] = useState([]);
-
   const location = useLocation();
-
   const { name, fullName } = location.state;
 
   const fetchPrize = async () => {
@@ -70,7 +68,7 @@ function Graph({ post }) {
               datasets: [
                 {
                   data: coinprize,
-                  label: `Prize `,
+                  label: `Price in $`,
                   font: {
                     size: 14,
                   },

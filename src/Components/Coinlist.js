@@ -85,10 +85,10 @@ function Coinlist() {
                   Full Name
                 </th>
                 <th scope="col " className="tcol">
-                  Current Prize
+                  Current Prize in $
                 </th>
                 <th scope="col " className="tcol">
-                  Day Change
+                  Day's Change in $
                 </th>
               </tr>
             </thead>
