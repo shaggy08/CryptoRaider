@@ -15,6 +15,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.use(cors(corsOptions));
 root.render(
   <React.StrictMode>
-    <App  />
+    <App />
   </React.StrictMode>
 );

@@ -1,7 +1,5 @@
 import "./App.css";
-import axios from "axios";
-import Coinlist from "./Components/Coinlist";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import CoinGraph from "./Pages/CoinGraph";
@@ -10,10 +8,6 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    // <div>
-    //  <h1>hello</h1>
-    // <Coinlist />
-    // </div>
     <div className="app-container">
       <BrowserRouter>
         <Nav />

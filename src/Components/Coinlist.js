@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Pagination } from "@mui/material";
-
 import "./Coinlist.css";
 import { useNavigate } from "react-router-dom";
-import LinearProgress from "@mui/material/LinearProgress";
 import e from "cors";
-import Skeleton from "@mui/material/Skeleton";
 import { CircularProgress } from "@mui/material";
 
 function Coinlist() {
@@ -14,7 +11,6 @@ function Coinlist() {
   const [poststag, setpoststag] = useState([]);
   const [page, setpage] = useState(1);
   const [isloading, setisloading] = useState(true);
-  const [searh, setsearch] = useState("");
 
   const navigate = useNavigate();
 
@@ -45,7 +41,7 @@ function Coinlist() {
     };
     fetchposts();
   }, []);
-  //console.log(poststag.all)
+
   function handleClick(post) {
     const { id, name, fullName } = post;
 
@@ -54,12 +50,6 @@ function Coinlist() {
 
   function handleTag(tagId) {
     setActiveTab(tagId);
-  }
-  function handlesearch(id) {
-    let test = poststag.all.filter((name) => name.name == "AAVE");
-    // console.log(test);
-    // console.log((poststag.all = test));
-    setpoststag((poststag.all = test));
   }
 
   return (

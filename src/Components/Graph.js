@@ -5,9 +5,7 @@ import "./Graph.css";
 import { Chart as ChartJS } from "chart.js/auto";
 import { useParams } from "react-router-dom";
 import useInterval from "./utils";
-import LinearProgress from "@mui/material/LinearProgress";
 import Skeleton from "@mui/material/Skeleton";
-
 import { useLocation } from "react-router-dom";
 
 function Graph({ post }) {
@@ -16,28 +14,16 @@ function Graph({ post }) {
   const { id } = useParams();
   const [cointime, setcointime] = useState([]);
   const [coinprize, setcoinprize] = useState([]);
-  const [CoinName, setCoinName] = useState();
 
   const location = useLocation();
 
   const { name, fullName } = location.state;
 
-  //   const fetchposts = async () => {
-  //     const result = await axios.get("https://jsonkeeper.com/b/VE7I");
-  //     setposts(result.data);
-  //     setisloadingpost(false);
-  //     const tempCoinName = result.data.filter((data) => data.id === +id);
-  //     setCoinName(tempCoinName);
-  //   };
-  //   console.log(coinprize);
-
-  //   console.log(CoinName);
   const fetchPrize = async () => {
     const result = await axios.get("https://jsonkeeper.com/b/DB32");
     setprize(result.data);
     setisloading(false);
     setcoinprize(result.data.slice(0, 10).map((data) => data.price));
-    // let temp=result.data.slice(0, 10).map((data) => data.datetime).map(string => string.slice(0, -7))
     setcointime(
       result.data
         .slice(0, 10)
@@ -60,15 +46,13 @@ function Graph({ post }) {
         .map((data) => data.datetime)
         .map((string) => string.slice(0, -7))
     );
-    // console.log(num);
   };
-  //   console.log(cointime);
+
   useInterval(randomNumberGenerator, 60000);
 
   return (
     <div className="grap_conatiner">
       <div className="coin-name">
-        {/* <h1 className="name"> {CoinName[0].id}</h1> */}
         <h1 className="name"> {name}</h1>
         <h1 className="name"> {fullName}</h1>
       </div>
