@@ -1,16 +1,14 @@
-import React from 'react'
-import Graph from '../Components/Graph'
+import React from "react";
+import Graph from "../Components/Graph";
+
+import "./CoinGraph.css";
 
 function CoinGraph() {
-    return (
-        <div>
-            <div className="cantiner">
-       
-            </div>
-            < Graph />
-            
-        </div>
-    )
+  return (
+    <div className="container coin-graph-container">
+      <Graph />
+    </div>
+  );
 }
 
-export default CoinGraph
+export default CoinGraph;

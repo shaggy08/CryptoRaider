@@ -1,0 +1,36 @@
+.foot_contain {
+    color: black;
+    width: 100%;
+    background-color: white;
+  }
+  .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    font-size: 15px;
+    list-style: none;
+    padding: 20px 90px 20px 90px;
+    margin: 20px 90px 20px 90px;
+  }
+  footer {
+    padding-bottom: 10px;
+    text-align: center;
+    color: #686868;
+  }
+  .logos {
+    /* padding: 0px; */
+    text-align: left;
+    margin-left: 20px;
+    font-size: 25px;
+   
+  }
+  .footer_icon {
+    margin-left: 20px;
+    cursor: pointer;
+   
+  }
+  .logos svg {
+    height: 4rem;
+  }
+  
