@@ -13,6 +13,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // }
 
 // root.use(cors(corsOptions));
+
+// const cors = require("cors");
+
+// root.options("*", cors({ origin: 'http://localhost:3000', optionsSuccessStatus: 200 }));
+
+// root.use(cors({ origin: "http://localhost:3000", optionsSuccessStatus: 200 }));
+
 root.render(
   <React.StrictMode>
     <App />
