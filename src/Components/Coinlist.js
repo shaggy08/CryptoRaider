@@ -32,7 +32,7 @@ function Coinlist() {
 
   useEffect(() => {
     const fetchposts = async () => {
-      const result = await axios.get("https://jsonkeeper.com/b/VE7I");
+      const result = await axios.get("https://supermind-staging.vercel.app/api/test/listing");
       const postsResult = parseData(result.data);
       setisloading(false);
 

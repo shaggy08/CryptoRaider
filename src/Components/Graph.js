@@ -18,7 +18,7 @@ function Graph({ post }) {
   const { name, fullName } = location.state;
 
   const fetchPrize = async () => {
-    const result = await axios.get("https://jsonkeeper.com/b/DB32");
+    const result = await axios.get("https://supermind-staging.vercel.app/api/test/graph");
     setprize(result.data);
     setisloading(false);
     setcoinprize(result.data.slice(0, 10).map((data) => data.price));
