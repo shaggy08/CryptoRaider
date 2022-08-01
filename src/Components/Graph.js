@@ -21,7 +21,8 @@ function Graph({ post }) {
     const result = await axios.get("https://supermind-staging.vercel.app/api/test/graph");
     setprize(result.data);
     setisloading(false);
-    setcoinprize(result.data.slice(0, 10).map((data) => data.price));
+    const num = Math.floor(Math.random() * 300 + 1);
+    setcoinprize(result.data.slice(num, num+10).map((data) => data.price));
     setcointime(
       result.data
         .slice(0, 10)
